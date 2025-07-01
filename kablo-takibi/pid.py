@@ -13,3 +13,12 @@ class PID:
         derivative = (error - self.prev_error) / dt
         self.prev_error = error
         return self.Kp * error + self.Ki * self.integral + self.Kd * derivative
+    
+    def compute(self, error, dt):
+        self.integral += error * dt
+        derivative = (error - self.prev_error) / dt
+        self.prev_error = error
+        output = self.Kp * error + self.Ki * self.integral + self.Kd * derivative
+        print(f"PID output: {output:.2f}")
+        return output
+

@@ -14,9 +14,9 @@ class MavController:
 
     def set_mode(self, mode):
         self.master.set_mode(mode)
+        self.master.motors_armed_wait()
         print(f"Mod ayarlandı: {mode}")
 
     def send_manual_control(self, x, y, z, r):
         self.master.mav.manual_control_send(
-            self.master.target_system, x, y, z, r, 0
-        )
+            self.master.target_system, x, y, z, r, 0)
