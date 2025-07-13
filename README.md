@@ -1,6 +1,6 @@
 ## Özellikler
 - Python ve C/C++ destekli kod altyapısı
-- Raspberry Pi uyumlu
+- Jatson Nano + Raspberry Pi uyumlu
 - QGroundControl ve MAVLink (pymavlink) ile iletişim
 - PID kontrol algoritması örneği
 - OpenCV ile veri ön işleme altyapısı
